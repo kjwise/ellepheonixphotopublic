@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Elle Phoenix</title>
+    <meta name="description" content="Contact Elle Phoenix for bookings, tours, and print enquiries." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">ELLE PHOENIX</a>
+        <nav class="nav">
+          <ul>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="prints.html">Prints</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title">Contact</h1>
+          <p style="text-align:center" class="muted">For bookings and enquiries, use the form below or email directly.</p>
+
+          <form action="mailto:elisokalandia84@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <select name="interest">
+              <option value="Portraits">Portraits</option>
+              <option value="Branding">Branding / Editorial</option>
+              <option value="Weddings">Weddings / Elopements</option>
+              <option value="Tours">Photography Tours</option>
+              <option value="Prints">Fine Art Prints</option>
+              <option value="Other">Other</option>
+            </select>
+            <textarea name="message" rows="6" placeholder="Tell me a little about your idea, dates, and location."></textarea>
+            <div class="cta-row">
+              <button class="btn" type="submit">Send message</button>
+              <a class="btn btn-secondary" href="mailto:elisokalandia84@gmail.com">Email instead</a>
+            </div>
+          </form>
+
+          <div class="card" style="margin-top:24px">
+            <h3>Details</h3>
+            <p class="muted">Based in Reykjavík, Iceland · Available worldwide</p>
+            <p>
+              Phone/WhatsApp: <a class="link" href="tel:+995551203311">+995 551 203 311</a>
+              · <a class="link" href="https://wa.me/995551203311" target="_blank" rel="noopener">
+                  <img class="icon" alt="" aria-hidden="true" width="18" height="18"
+                       src="assets/WhatsApp-Brand-Resource-Center/01_Glyph/01_Digital/02_SVG/Green/Digital_Glyph_Green.svg" />
+                  Chat on WhatsApp
+                </a>
+            </p>
+            <p>Iceland (call): +354 773 8238</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Elle Phoenix Photography</p>
+        <p>Iceland: +354 773 8238</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "basePath": "assets/images",
+  "categories": [
+    {
+      "name": "landscapes",
+      "title": "Landscapes",
+      "images": [
+        "2M7A8673.jpg",
+        "2M7A8691.jpg",
+        "2M7A8957.jpg",
+        "IMG_3706.jpg",
+        "IMG_4527.jpg",
+        "IMG_4528.jpg",
+        "IMG_6403.jpg"
+      ]
+    },
+    {
+      "name": "personas",
+      "title": "Personas",
+      "images": [
+        "IMG_2000.jpg",
+        "IMG_2063.jpg",
+        "IMG_4883.jpg"
+      ]
+    },
+    {
+      "name": "places",
+      "title": "Places",
+      "images": [
+        "2M7A9176.jpg",
+        "IMG_2912.jpg",
+        "IMG_5244.jpg"
+      ]
+    }
+  ]
+}

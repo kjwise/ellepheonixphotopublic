@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Elle Phoenix — Portraits, landscapes, and photography tours in Iceland. Fine art prints and bespoke photo sessions." />
+    <title>Elle Phoenix Photography</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">ELLE PHOENIX</a>
+        <nav class="nav">
+          <ul>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="prints.html">Prints</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Quiet light. Vast places.</h1>
+            <p>Portraits and landscapes by Elle Phoenix. Based in Iceland; available worldwide for commissions, bespoke sessions, and guided photo tours.</p>
+            <div class="cta-row">
+              <a class="btn" href="portfolio.html">View Portfolio</a>
+              <a class="btn btn-secondary" href="tours.html">Iceland Tours</a>
+            </div>
+          </div>
+          <div class="hero-media">
+            <img
+              src="assets/images/landscapes/2M7A8673.jpg"
+              srcset="assets/images/landscapes/2M7A8673.jpg 1x, assets/images/landscapes/2M7A8673.jpg 2x"
+              sizes="(max-width: 900px) 100vw, 50vw"
+              alt="Elle Phoenix photograph"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Featured Work</h2>
+          <div class="gallery" id="featured-gallery"></div>
+          <div class="center-row">
+            <a class="link" href="portfolio.html">See full portfolio →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container about">
+          <div class="about-text">
+            <h2 class="section-title">About</h2>
+            <p>Originally from the mountainous country of Georgia and now based in Iceland, Elle Phoenix photographs the quiet relationship between people and place. With a minimalist approach, her work explores light, stillness, and scale.</p>
+            <p class="muted">Available for portrait sessions, editorial commissions, and 1:1 or small-group photo tours around Iceland.</p>
+            <div class="cta-row">
+              <a class="btn" href="services.html">Book a Session</a>
+              <a class="btn btn-secondary" href="contact.html">Get in Touch</a>
+            </div>
+          </div>
+          <div class="about-media">
+            <img
+              src="assets/images/ellepheonix.jpg"
+              srcset="assets/images/ellepheonix.jpg 1x, assets/images/ellepheonix.jpg 2x"
+              sizes="(max-width: 900px) 100vw, 40vw"
+              alt="Portrait of Elle Phoenix"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Elle Phoenix Photography</p>
+        <p class="muted">Portraits · Landscapes · Tours in Iceland</p>
+        <p>Iceland: +354 773 8238</p>
+      </div>
+    </footer>
+    <script src="assets/js/gallery.js"></script>
+    <script>
+      window.Gallery && window.Gallery.renderFeatured('featured-gallery', 6);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio — Elle Phoenix</title>
+    <meta name="description" content="Portrait and landscape photography by Elle Phoenix." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">ELLE PHOENIX</a>
+        <nav class="nav">
+          <ul>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="prints.html">Prints</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title">Portfolio</h1>
+          <div id="portfolio-root" style="margin-top:24px"></div>
+          <div class="center-row" style="margin-top:28px">
+            <a class="btn" href="contact.html">Request full portfolio</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2025 Elle Phoenix Photography</p>
+        <p>Iceland: +354 773 8238</p>
+      </div>
+    </footer>
+    <script src="assets/js/gallery.js"></script>
+    <script>
+      window.Gallery && window.Gallery.renderPortfolio('portfolio-root');
+    </script>
+  </body>
+  </html>
