@@ -3,6 +3,7 @@
 
 (function () {
   const MANIFEST_URL = 'assets/images/manifest.json';
+  const MASONRY_ROW_HEIGHT = 8;
 
   function el(tag, attrs = {}, children = []) {
     const node = document.createElement(tag);
@@ -21,13 +22,72 @@
       .replace(/\b\w/g, (m) => m.toUpperCase());
   }
 
+  function withExtension(src, ext) {
+    return src.replace(/\.[^.]+$/, ext);
+  }
+
   function figureFor(src, alt) {
     const img = el('img', {
       src,
       alt,
-      loading: 'lazy'
+      loading: 'lazy',
+      decoding: 'async'
     });
-    return el('figure', { class: 'gallery-item' }, [img]);
+    const picture = el('picture', {}, [
+      el('source', { type: 'image/avif', srcset: withExtension(src, '.avif') }),
+      el('source', { type: 'image/webp', srcset: withExtension(src, '.webp') }),
+      img
+    ]);
+    return el('figure', { class: 'gallery-item' }, [picture]);
+  }
+
+  function debounce(fn, wait = 100) {
+    let t = null;
+    return function (...args) {
+      if (t) window.clearTimeout(t);
+      t = window.setTimeout(() => fn.apply(this, args), wait);
+    };
+  }
+
+  function layoutMasonry(gallery) {
+    if (!gallery || !gallery.isConnected) return;
+    if (gallery.getClientRects().length === 0) return;
+
+    const styles = getComputedStyle(gallery);
+    const gap = parseFloat(styles.rowGap || styles.gap) || 0;
+
+    const items = Array.from(gallery.children).filter((n) => n.classList?.contains('gallery-item'));
+    items.forEach((item) => {
+      const height = item.getBoundingClientRect().height;
+      const span = Math.ceil((height + gap) / (MASONRY_ROW_HEIGHT + gap));
+      item.style.gridRowEnd = `span ${Math.max(1, span)}`;
+    });
+
+    gallery.classList.add('gallery-masonry-enabled');
+  }
+
+  function enableMasonry(gallery) {
+    if (!gallery || gallery.dataset.masonry === 'on') return;
+    gallery.dataset.masonry = 'on';
+    gallery.classList.add('gallery-masonry');
+
+    let raf = null;
+    const schedule = () => {
+      if (raf !== null) return;
+      raf = window.requestAnimationFrame(() => {
+        raf = null;
+        layoutMasonry(gallery);
+      });
+    };
+
+    gallery.querySelectorAll('img').forEach((img) => {
+      if (img.complete) return;
+      img.addEventListener('load', schedule, { passive: true });
+      img.addEventListener('error', schedule, { passive: true });
+    });
+
+    window.addEventListener('resize', debounce(schedule, 120), { passive: true });
+    schedule();
   }
 
   async function loadManifest() {
@@ -64,6 +124,8 @@
         panelEls.forEach((p, i) => {
           p.hidden = i !== index;
         });
+        const gallery = panelEls[index]?.querySelector('.gallery');
+        if (gallery) enableMasonry(gallery);
         if (setHash) {
           const name = cats[index].name;
           try { history.replaceState(null, '', `#${name}`); } catch (_) {
@@ -102,7 +164,7 @@
         tabs.appendChild(t);
 
         const panel = el('div', { class: 'tab-panel', id: pid, role: 'tabpanel', 'aria-labelledby': tid });
-        const gallery = el('div', { class: 'gallery' });
+        const gallery = el('div', { class: 'gallery gallery-masonry' });
         cat.images.forEach((file) => {
           const src = `${manifest.basePath}/${cat.name}/${file}`;
           gallery.appendChild(figureFor(src, `${cat.title || humanize(cat.name)} — Elle Phoenix`));

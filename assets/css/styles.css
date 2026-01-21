@@ -102,6 +102,11 @@ h1, h2, h3, .logo {
     0 10px 28px rgba(0, 0, 0, 0.55),
     inset 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
+.hero-media picture,
+.about-media picture,
+.gallery-item picture {
+  display: block;
+}
 
 /* Sections */
 .section { padding: 72px 0; }
@@ -130,8 +135,17 @@ h1, h2, h3, .logo {
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
+.gallery-masonry {
+  align-items: start;
+}
+.gallery-masonry-enabled {
+  grid-auto-flow: dense;
+  grid-auto-rows: 8px;
+}
 .gallery-item {
   overflow: hidden;
+  margin: 0;
+  align-self: start;
   background: linear-gradient(180deg, #0f1113 0%, #0b0d10 100%);
   border: 2px solid var(--frame);
   border-radius: 12px;
