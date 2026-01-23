@@ -119,6 +119,7 @@ h1, h2, h3, .logo {
 .about { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
 .about-media img {
   width: 100%;
+  height: auto;
   border-radius: 12px;
   display: block;
   background: linear-gradient(180deg, #101316 0%, #0c0f12 100%);
