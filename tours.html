@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Photography Tours — Elle Phoenix</title>
-    <meta name="description" content="Private and small group photography tours in Iceland led by Elle Phoenix." />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Private and group photography tours in Iceland with Elle Phoenix." />
+    <title>Photography Tours — Elle Phoenix Photography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
@@ -13,12 +15,12 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="logo" href="index.html">ELLE PHOENIX</a>
-        <nav class="nav">
+        <nav class="nav" aria-label="Main navigation">
           <ul>
+            <li><a href="index.html#offerings">Offerings</a></li>
+            <li><a href="tours.html" class="btn btn-accent">Tours</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="tours.html">Tours</a></li>
-            <li><a href="prints.html">Prints</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -26,55 +28,209 @@
     </header>
 
     <main>
-      <section class="section">
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="hero-kicker">Iceland Photo Tours</p>
+            <h1>Learn, create, and keep going with <span>light</span></h1>
+            <p>
+              Guided photo days designed for people who want to work with Iceland
+              landscapes without losing time to logistics. Warm light, practical pacing, and
+              coaching in real conditions.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-accent" href="#packages">Tour Packages</a>
+              <a class="btn btn-outline" href="#book">Request itinerary</a>
+            </div>
+          </div>
+          <div class="hero-media">
+            <picture>
+              <source type="image/avif" srcset="assets/images/landscapes/2M7A8673.avif" />
+              <source type="image/webp" srcset="assets/images/landscapes/2M7A8673.webp" />
+              <img
+                src="assets/images/landscapes/2M7A8673.jpg"
+                alt="Water and cliffs by coastal Icelandic landscape"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="packages">
         <div class="container">
-          <h1 class="section-title">Photography Tours — Iceland</h1>
+          <p class="eyebrow">Tour Offerings</p>
+          <h2 class="section-title">Photography Tours</h2>
+          <p class="section-lead">Small formats, clear timing, strong shooting outcomes.</p>
 
-          <div class="cards" style="margin-top:24px">
-            <div class="card">
-              <h3>Private Tour (1–2 ppl)</h3>
-              <p>Tailored one-day journey to waterfalls, black-sand beaches, glaciers, and quiet locations away from the crowds.</p>
-              <ul>
-                <li>Sunrise to sunset</li>
-                <li>Pickup in Reykjavik area</li>
-                <li>Guidance, tuition, and composition coaching</li>
-              </ul>
-              <p class="muted">From €950/day</p>
-              <a class="btn" href="contact.html">Enquire</a>
+          <div class="offer-grid">
+            <article class="package-card featured">
+              <div class="package-media">
+                <img
+                  src="assets/images/places/2M7A9176.jpg"
+                  alt="Iceland coast during soft morning light"
+                  loading="lazy"
+                />
+                <span class="package-chip">Private Tour</span>
+              </div>
+              <div class="package-content">
+                <p class="package-price">From €1180.00 <span>/ day</span></p>
+                <p class="package-tax">VAT (24%): €230.00</p>
+                <ul>
+                  <li>1–2 people</li>
+                  <li>Pickup from Reykjavik area</li>
+                  <li>Customized route and timing</li>
+                  <li>On-location composition coaching</li>
+                  <li>Private post-shoot check-in</li>
+                </ul>
+                <a class="btn btn-accent" href="#book">Book Private Tour</a>
+              </div>
+            </article>
+
+            <article class="package-card">
+              <div class="package-media">
+                <img
+                  src="assets/images/places/IMG_5244.jpg"
+                  alt="Rocky Icelandic landscape with open sky"
+                  loading="lazy"
+                />
+                <span class="package-chip">Small Group</span>
+              </div>
+              <div class="package-content">
+                <p class="package-price">From €560.00 <span>/ person</span></p>
+                <p class="package-tax">VAT (24%): €110.00</p>
+                <ul>
+                  <li>1–4 people</li>
+                  <li>South Coast or Snæfellsnes theme</li>
+                  <li>Transport and pacing support</li>
+                  <li>Editing tips during session</li>
+                  <li>Ideal for first-time shooting days</li>
+                </ul>
+                <a class="btn btn-accent" href="#book">Book Small Group</a>
+              </div>
+            </article>
+
+            <article class="package-card">
+              <div class="package-media">
+                <img
+                  src="assets/images/landscapes/IMG_4528.jpg"
+                  alt="Icelandic waterfall and distant horizon"
+                  loading="lazy"
+                />
+                <span class="package-chip">Seasonal Experience</span>
+              </div>
+              <div class="package-content">
+                <p class="package-price">From €770.00 <span>/ person</span></p>
+                <p class="package-tax">VAT (24%): €150.00</p>
+                <ul>
+                  <li>3-hour session option</li>
+                  <li>Mini itinerary and photo goals</li>
+                  <li>Hands-on direction and flow</li>
+                  <li>Backup weather locations</li>
+                  <li>Great for mixed-level participants</li>
+                </ul>
+                <a class="btn btn-accent" href="#book">Book Seasonal</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="process">
+        <div class="container">
+          <p class="eyebrow">How It Works</p>
+          <h2 class="section-title">Tour Flow</h2>
+          <div class="process-grid" style="margin-top:34px;">
+            <div class="process-step">
+              <div class="step-marker">01</div>
+              <h3>Plan</h3>
+              <p>Share your travel window and goals. I build a route around light, distance, and weather confidence.</p>
             </div>
-
-            <div class="card">
-              <h3>Small Group (max 4)</h3>
-              <p>Seasonal itineraries covering South Coast, Snæfellsnes, or Highlands (summer). Ideal balance of learning and exploration.</p>
-              <ul>
-                <li>Transport included</li>
-                <li>Evening editing review</li>
-                <li>Light hiking at locations</li>
-              </ul>
-              <p class="muted">From €450/person</p>
-              <a class="btn" href="contact.html">Join a tour</a>
+            <div class="process-step">
+              <div class="step-marker">02</div>
+              <h3>Shoot</h3>
+              <p>Move together on foot or from the car with breaks and coaching to keep the day focused and enjoyable.</p>
             </div>
+            <div class="process-step">
+              <div class="step-marker">03</div>
+              <h3>Review</h3>
+              <p>Get a practical gallery for easy selection, plus guidance on your strongest frames right away.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="section section-dark" id="book">
+        <div class="container booking-grid">
+          <div>
+            <p class="eyebrow">What to bring</p>
+            <h2 class="section-title">Packing Checklist</h2>
+            <div class="cards" style="margin-top:18px;">
+              <div class="card">
+                <h3>Essentials</h3>
+                <ul>
+                  <li>Camera + lens + spare batteries</li>
+                  <li>Memory cards and lens cloth</li>
+                  <li>Warm layers and waterproof outerwear</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Support gear</h3>
+                <ul>
+                  <li>Water bottles and snacks</li>
+                  <li>Tripod if required for long exposure</li>
+                  <li>Phone charger and power bank</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Important note</h3>
+                <p>We adapt daily conditions based on weather, daylight, and safety recommendations.</p>
+              </div>
+            </div>
           </div>
 
-          <div class="card" style="margin-top:20px">
-            <h3>What to bring</h3>
-            <ul>
-              <li>Camera, spare batteries, memory cards</li>
-              <li>Warm layers, waterproofs, sturdy footwear</li>
-              <li>Snacks and water</li>
-            </ul>
-            <p class="muted">Full gear list and itinerary sent upon booking.</p>
-          </div>
+          <form class="booking-form" action="mailto:elisokalandia84@gmail.com" method="post" enctype="text/plain">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Group / Session
+              <select name="interest" required>
+                <option>Private Tour</option>
+                <option>Small Group Tour</option>
+                <option>Seasonal Experience</option>
+                <option>Other / Custom</option>
+              </select>
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" placeholder="Preferred dates, group size, and destination ideas."></textarea>
+            </label>
+            <button class="btn" type="submit">Send Inquiry</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>© 2025 Elle Phoenix Photography</p>
-        <p>Iceland: +354 773 8238</p>
+        <p class="footer-brand">ELLE PHOENIX</p>
+        <div>
+          <a class="link" href="portfolio.html">Portfolio</a>
+          <a class="link" href="services.html">Services</a>
+          <a class="link" href="tours.html">Tours</a>
+          <a class="link" href="prints.html">Prints</a>
+          <a class="link" href="contact.html">Contact</a>
+        </div>
+        <p class="muted">Portraits · Landscapes · Tours in Iceland</p>
       </div>
+      <div class="container footer-copy">© 2025 Elle Phoenix Photography</div>
     </footer>
   </body>
 </html>

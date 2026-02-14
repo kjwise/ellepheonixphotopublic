@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Services — Elle Phoenix</title>
-    <meta name="description" content="Portrait sessions, branding, and editorial photography services by Elle Phoenix in Iceland and worldwide." />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Elle Phoenix — Portrait sessions, photo tours, and creative bookings in Iceland and worldwide." />
+    <title>Services — Elle Phoenix Photography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
@@ -13,81 +15,229 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="logo" href="index.html">ELLE PHOENIX</a>
-        <nav class="nav">
+        <nav class="nav" aria-label="Main navigation">
           <ul>
+            <li><a href="index.html#philosophy">Philosophy</a></li>
+            <li><a href="index.html#process">The Experience</a></li>
+            <li><a href="index.html#offerings">Offerings</a></li>
+            <li><a href="index.html#book">Book</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="tours.html">Tours</a></li>
-            <li><a href="prints.html">Prints</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html" class="btn btn-accent">Services</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="section">
-        <div class="container">
-          <h1 class="section-title">Services</h1>
-
-          <div class="cards" style="margin-top:24px">
-            <div class="card">
-              <h3>Portrait Sessions</h3>
-              <p>Minimal, considered portraits on location or in-studio. Ideal for individuals, couples, or families visiting Iceland.</p>
-              <ul>
-                <li>Up to 90 minutes</li>
-                <li>40+ edited images</li>
-                <li>Private online gallery</li>
-              </ul>
-              <p class="muted">Starting from €200</p>
-              <a class="btn" href="contact.html">Book portrait</a>
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="hero-kicker">Services designed for you</p>
+            <h1>Photography <span>for every stage</span></h1>
+            <p>
+              From a one-hour portrait session to small group creative days, each offering
+              is crafted with a simple, calm process and intentional results.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-accent" href="#packages">Explore Packages</a>
+              <a class="btn btn-outline" href="#book">Send Inquiry</a>
             </div>
-
-            <div class="card">
-              <h3>Photo Tours</h3>
-              <p>I will take you to beautiful places in Iceland and take beautiful photos of you. Ideal for individuals, couples, or families visiting Iceland.</p>
-              For more details check <a href="tours">tours here</a>
-              <ul>
-                <li>From 4 to 10 hours</li>
-                <li>40+ edited images</li>
-                <li>Private online gallery</li>
-              </ul>
-              <p class="muted">Starting from €500</p>
-              <a class="btn" href="contact.html">Book portrait</a>
-            </div>
-
-            <div class="card">
-              <h3>Events & Parties</h3>
-              <p>I'll be your event/party photographer.</p>
-              <ul>
-                <li>1 to 5 hours</li>
-                <li>40+ edited images</li>
-                <li>Private online gallery</li>
-              </ul>
-              <p class="muted">Starting from €300</p>
-              <a class="btn" href="contact.html">Book portrait</a>
-            </div>
-
-
-
-          <div class="card" style="margin-top:20px">
-            <h3>Add-ons</h3>
-            <ul>
-              <li>Fine-art prints</li>
-              <li>Hair & makeup styling</li>
-              <li>Location scouting & permits</li>
-            </ul>
-            <p class="muted">Custom packages available upon request.</p>
           </div>
+          <div class="hero-media">
+            <picture>
+              <source type="image/avif" srcset="assets/images/landscapes/2M7A8957.avif" />
+              <source type="image/webp" srcset="assets/images/landscapes/2M7A8957.webp" />
+              <img
+                src="assets/images/landscapes/2M7A8957.jpg"
+                alt="Landscape light with natural textures"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="packages">
+        <div class="container">
+          <p class="eyebrow">Offerings</p>
+          <h2 class="section-title">Session Types</h2>
+          <p class="section-lead">All sessions include edited delivery and a curated gallery.</p>
+
+          <div class="offer-grid">
+            <article class="package-card">
+              <div class="package-media">
+                <img
+                  src="assets/images/personas/IMG_2000.jpg"
+                  alt="Portrait session style frame"
+                  loading="lazy"
+                />
+                <span class="package-chip">Portrait Sessions</span>
+              </div>
+              <div class="package-content">
+                <p class="package-price">From €250.00 <span>/ session</span></p>
+                <p class="package-tax">VAT (24%): €50.00</p>
+                <ul>
+                  <li>60–90 minutes</li>
+                  <li>1 location</li>
+                  <li>Guidance for effortless poses</li>
+                  <li>Private online gallery</li>
+                  <li>Ideal for individuals, families, and couples</li>
+                </ul>
+                <a class="btn btn-accent" href="#book">Book Portrait</a>
+              </div>
+            </article>
+
+            <article class="package-card featured">
+              <div class="package-media">
+                <img
+                  src="assets/images/personas/IMG_2063.jpg"
+                  alt="Couple portrait near water"
+                  loading="lazy"
+                />
+                <span class="package-chip">Photo Tours</span>
+              </div>
+              <div class="package-content">
+                <p class="package-price">From €620.00 <span>/ person</span></p>
+                <p class="package-tax">VAT (24%): €120.00</p>
+                <ul>
+                  <li>1- to 10-hour sessions</li>
+                  <li>Scouting + shot guidance</li>
+                  <li>Best-angle coaching</li>
+                  <li>Light hiking support and warm planning</li>
+                  <li>Locations arranged around light and weather</li>
+                </ul>
+                <a class="btn btn-accent" href="#book">Book Tour</a>
+              </div>
+            </article>
+
+            <article class="package-card">
+              <div class="package-media">
+                <img
+                  src="assets/images/landscapes/IMG_6403.jpg"
+                  alt="Event and social scene"
+                  loading="lazy"
+                />
+                <span class="package-chip">Events & Parties</span>
+              </div>
+              <div class="package-content">
+                <p class="package-price">From €375.00 <span>/ session</span></p>
+                <p class="package-tax">VAT (24%): €75.00</p>
+                <ul>
+                  <li>1–5 hours of coverage</li>
+                  <li>Fast delivery timeline</li>
+                  <li>High-resolution event edits</li>
+                  <li>Online sharing-ready gallery</li>
+                  <li>Editorial-style storytelling support</li>
+                </ul>
+                <a class="btn btn-accent" href="#book">Book Event</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="process">
+        <div class="container">
+          <p class="eyebrow">The Journey</p>
+          <h2 class="section-title">How it works</h2>
+          <p class="section-lead">Simple planning, clear delivery, and no rushed moments.</p>
+
+          <div class="process-grid">
+            <div class="process-step">
+              <div class="step-marker">01</div>
+              <h3>Brief</h3>
+              <p>
+                You share your goal and preferred dates, and I shape the shoot around your
+                needs, location options, and vibe.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="step-marker">02</div>
+              <h3>Shooting Day</h3>
+              <p>
+                A calm workflow with minimal direction and clear checks so every image feels
+                natural, not forced.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="step-marker">03</div>
+              <h3>Delivery</h3>
+              <p>
+                Receive a curated gallery and retain access for review, sharing, and print
+                preparation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="book">
+        <div class="container booking-grid">
+          <div>
+            <p class="eyebrow">Need details first?</p>
+            <h2 class="section-title">Add-ons</h2>
+            <p class="section-lead" style="margin-left:auto; margin-right:auto;">
+              Pair your package with extra options if your dates or vision needs a specific boost.
+            </p>
+            <div class="cards" style="margin-top: 18px;">
+              <div class="card">
+                <h3>Fine-Art Prints</h3>
+                <p class="muted">Available on request and handled after gallery selection.</p>
+              </div>
+              <div class="card">
+                <h3>Hair &amp; Makeup Support</h3>
+                <p class="muted">Professional styling support for brand and editorial sessions.</p>
+              </div>
+              <div class="card">
+                <h3>Location Scouting</h3>
+                <p class="muted">Permit checks and alternate backup spots in case of weather changes.</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="booking-form" action="mailto:elisokalandia84@gmail.com" method="post" enctype="text/plain">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Service
+              <select name="interest" required>
+                <option>Portrait Sessions</option>
+                <option>Photo Tours</option>
+                <option>Events & Parties</option>
+                <option>Prints</option>
+                <option>Custom add-ons</option>
+              </select>
+            </label>
+            <label>
+              What do you need help with?
+              <textarea name="message" rows="4" placeholder="Dates, location, budget, preferred style."></textarea>
+            </label>
+            <button class="btn" type="submit">Send Inquiry</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>© 2025 Elle Phoenix Photography</p>
-        <p>Iceland: +354 773 8238</p>
+        <p class="footer-brand">ELLE PHOENIX</p>
+        <div>
+          <a class="link" href="portfolio.html">Portfolio</a>
+          <a class="link" href="services.html">Services</a>
+          <a class="link" href="tours.html">Tours</a>
+          <a class="link" href="prints.html">Prints</a>
+          <a class="link" href="contact.html">Contact</a>
+        </div>
+        <p class="muted">Portraits · Landscapes · Tours in Iceland</p>
       </div>
+      <div class="container footer-copy">© 2025 Elle Phoenix Photography</div>
     </footer>
   </body>
 </html>

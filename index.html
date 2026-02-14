@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Elle Phoenix — Portraits, landscapes, and photography tours in Iceland. Fine art prints and bespoke photo sessions." />
+    <meta name="description" content="Elle Phoenix — Portraits, landscapes, and photography sessions in Iceland." />
     <title>Elle Phoenix Photography</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
@@ -15,38 +15,43 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="logo" href="index.html">ELLE PHOENIX</a>
-        <nav class="nav">
+        <nav class="nav" aria-label="Main navigation">
           <ul>
+            <li><a href="#philosophy">Philosophy</a></li>
+            <li><a href="#process">The Experience</a></li>
+            <li><a href="#offerings">Offerings</a></li>
+            <li><a href="#testimonials">Love Notes</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="tours.html">Tours</a></li>
-            <li><a href="prints.html">Prints</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#book" class="btn btn-accent">Book a Session</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-text">
-            <h1>Quiet light. Vast places.</h1>
-            <p>Portraits and landscapes by Elle Phoenix. Based in Iceland; available worldwide for commissions, bespoke sessions, and guided photo tours.</p>
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="hero-kicker">Lifestyle & People Photographer</p>
+            <h1>Capture your <span>true colors</span></h1>
+            <p>
+              Warm, conversational photography for portraits, couples, and brand work. 
+              Authentic sessions with clean editing and a calm, intentional workflow.
+            </p>
             <div class="cta-row">
-              <a class="btn" href="portfolio.html">View Portfolio</a>
-              <a class="btn btn-secondary" href="tours.html">Iceland Tours</a>
+              <a class="btn btn-accent" href="#process">The Experience</a>
+              <a class="btn btn-outline" href="portfolio.html">View Portfolio</a>
             </div>
           </div>
+
           <div class="hero-media">
             <picture>
-              <source type="image/avif" srcset="assets/images/landscapes/2M7A8673.avif" />
-              <source type="image/webp" srcset="assets/images/landscapes/2M7A8673.webp" />
+              <source type="image/avif" srcset="assets/images/personas/IMG_4883.avif" />
+              <source type="image/webp" srcset="assets/images/personas/IMG_4883.webp" />
               <img
-                src="assets/images/landscapes/2M7A8673.jpg"
-                width="1618"
-                height="2048"
-                alt="Elle Phoenix photograph"
+                src="assets/images/personas/IMG_4883.jpg"
+                alt="Portrait of a woman in soft natural light"
                 loading="lazy"
               />
             </picture>
@@ -54,52 +59,237 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="philosophy">
         <div class="container">
-          <h2 class="section-title">Featured Work</h2>
-          <div class="gallery" id="featured-gallery"></div>
-          <div class="center-row">
-            <a class="link" href="portfolio.html">See full portfolio →</a>
+          <p class="eyebrow">Why work with me</p>
+          <h2 class="section-title">Why Book a Session?</h2>
+          <p class="section-lead">Relaxed sessions with high-end results.</p>
+
+          <div class="philosophy-grid">
+            <article class="value-card">
+              <div class="value-icon">❤</div>
+              <h3>Authentic Connection</h3>
+              <p>
+                The best portraits come from trust and conversation. I keep direction light,
+                letting personality and natural gestures stay in focus.
+              </p>
+            </article>
+
+            <article class="value-card">
+              <div class="value-icon">✦</div>
+              <h3>Warm, True-to-Life Color</h3>
+              <p>
+                My editing keeps skin tones and natural tones clean and warm, so every frame
+                feels cinematic without looking artificial.
+              </p>
+            </article>
+
+            <article class="value-card">
+              <div class="value-icon">✦</div>
+              <h3>Story-First Approach</h3>
+              <p>
+                From scene selection to styling, every choice is made to reflect your story,
+                not a forced Instagram aesthetic.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section alt">
-        <div class="container about">
-          <div class="about-text">
-            <h2 class="section-title">About</h2>
-            <p>Originally from the mountainous country of Georgia and now based in Iceland, Elle Phoenix photographs the quiet relationship between people and place. With a minimalist approach, her work explores light, stillness, and scale.</p>
-            <p class="muted">Available for portrait sessions, editorial commissions, and 1:1 or small-group photo tours around Iceland.</p>
-            <div class="cta-row">
-              <a class="btn" href="services.html">Book a Session</a>
-              <a class="btn btn-secondary" href="contact.html">Get in Touch</a>
+      <section class="section section-alt" id="process">
+        <div class="container">
+          <p class="eyebrow">The Journey</p>
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-lead">Simple, stress-free, and built around your pace.</p>
+
+          <div class="process-grid">
+            <div class="process-step">
+              <div class="step-marker">01</div>
+              <h3>The Inquiry</h3>
+              <p>
+                You share your idea and timeline, and we plan location, outfits, and
+                style direction together.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="step-marker">02</div>
+              <h3>The Session</h3>
+              <p>
+                We shoot in comfortable settings with clear light cues, so you stay relaxed
+                while we create meaningful images.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="step-marker">03</div>
+              <h3>The Reveal</h3>
+              <p>
+                You receive a curated gallery with hand-edited images, delivered for
+                download and print preparation.
+              </p>
             </div>
           </div>
-          <div class="about-media">
-            <picture>
-              <source type="image/avif" srcset="assets/images/ellephoenix.avif" />
-              <source type="image/webp" srcset="assets/images/ellephoenix.webp" />
-              <img
-                src="assets/images/ellephoenix.jpg"
-                alt="Portrait of Elle Phoenix"
-                loading="lazy"
-              />
-            </picture>
+        </div>
+      </section>
+
+      <section class="section" id="offerings">
+        <div class="container">
+          <p class="eyebrow">Investment</p>
+          <h2 class="section-title">Choose Your Session</h2>
+          <p class="section-lead">Tailored for people, couples, and brand storytelling.</p>
+
+          <div class="offer-grid">
+            <article class="package-card">
+              <div class="package-media">
+                <img
+                  src="assets/images/personas/IMG_2000.jpg"
+                  alt="Portrait session at a scenic location"
+                  loading="lazy"
+                />
+                <span class="package-chip">Lifestyle Portrait</span>
+              </div>
+              <div class="package-content">
+                <p class="package-price">€435.00 <span>/ session</span></p>
+                <p class="package-tax">VAT (24%): €85.00</p>
+                <ul>
+                  <li>1 hour session</li>
+                  <li>1 location</li>
+                  <li>2 outfit changes</li>
+                  <li>20 high-resolution edits</li>
+                  <li>Online gallery</li>
+                </ul>
+                <a class="btn btn-accent" href="#book">Book Lifestyle Portrait</a>
+              </div>
+            </article>
+
+            <article class="package-card featured">
+              <div class="package-media">
+                <img
+                  src="assets/images/personas/IMG_4883.jpg"
+                  alt="Couple portrait in golden light"
+                  loading="lazy"
+                />
+                <span class="package-chip">Couples & Love</span>
+              </div>
+              <div class="package-content">
+                <p class="package-price">€560.00 <span>/ session</span></p>
+                <p class="package-tax">VAT (24%): €110.00</p>
+                <ul>
+                  <li>90-minute session</li>
+                  <li>Golden-hour option</li>
+                  <li>2 locations</li>
+                  <li>40 high-resolution edits</li>
+                  <li>Online gallery + print rights</li>
+                </ul>
+                <a class="btn btn-accent" href="#book">Book Couples & Love</a>
+              </div>
+            </article>
+
+            <article class="package-card">
+              <div class="package-media">
+                <img
+                  src="assets/images/landscapes/2M7A8691.jpg"
+                  alt="Scenic landscape for creative portraits"
+                  loading="lazy"
+                />
+                <span class="package-chip">Brand & Creative</span>
+              </div>
+              <div class="package-content">
+                <p class="package-price">€745.00 <span>/ session</span></p>
+                <p class="package-tax">VAT (24%): €145.00</p>
+                <ul>
+                  <li>2-hour session</li>
+                  <li>Creative direction call</li>
+                  <li>Multiple outfits</li>
+                  <li>50+ edited images</li>
+                  <li>Commercial usage rights</li>
+                </ul>
+                <a class="btn btn-accent" href="#book">Book Brand & Creative</a>
+              </div>
+            </article>
           </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="testimonials">
+        <div class="container">
+          <h2 class="section-title">Love Notes</h2>
+          <div class="testimonial-grid">
+            <blockquote class="testimonial-card">
+              <p>
+                "I never felt posed. Elle guided the session gently, and the results are
+                beautiful, warm, and genuinely us."
+              </p>
+              <footer>Sarah & James<span>Engagement Session</span></footer>
+            </blockquote>
+            <blockquote class="testimonial-card">
+              <p>
+                "The photos captured my brand perfectly — clean, modern, and emotionally
+                true. I booked my next campaign before the first shoot ended."
+              </p>
+              <footer>Elena M.<span>Brand Story Session</span></footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="book">
+        <div class="container booking-grid">
+          <div>
+            <p class="eyebrow">Ready to create?</p>
+            <h2 class="section-title">Ready to start?</h2>
+            <p>
+              I keep the calendar selective to preserve quality and attention for every
+              person. If you found your session above, send a message and I’ll reply
+              quickly.
+            </p>
+            <div class="meta-list">
+              <p><strong>Booking Window</strong> — usually responds within 24-48 hours</p>
+              <p><strong>Coverage</strong> — Iceland and travel bookings worldwide</p>
+            </div>
+          </div>
+
+          <form class="booking-form" action="mailto:elisokalandia84@gmail.com" method="post" enctype="text/plain">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Session Type
+              <select name="interest" required>
+                <option>Lifestyle Portrait</option>
+                <option>Couples & Love</option>
+                <option>Brand & Creative</option>
+                <option>Prints</option>
+                <option>Other / Custom</option>
+              </select>
+            </label>
+            <label>
+              Tell me about your vision
+              <textarea name="message" rows="4" placeholder="What kind of vibe are you looking for?"></textarea>
+            </label>
+            <button class="btn" type="submit">Send Inquiry</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>© 2025 Elle Phoenix Photography</p>
+        <p class="footer-brand">ELLE PHOENIX</p>
+        <div>
+          <a class="link" href="portfolio.html">Portfolio</a>
+          <a class="link" href="services.html">Services</a>
+          <a class="link" href="tours.html">Tours</a>
+          <a class="link" href="prints.html">Prints</a>
+          <a class="link" href="contact.html">Contact</a>
+        </div>
         <p class="muted">Portraits · Landscapes · Tours in Iceland</p>
-        <p>Iceland: +354 773 8238</p>
       </div>
+      <div class="container footer-copy">© 2025 Elle Phoenix Photography</div>
     </footer>
-    <script src="assets/js/gallery.js"></script>
-    <script>
-      window.Gallery && window.Gallery.renderFeatured('featured-gallery', 6);
-    </script>
   </body>
 </html>

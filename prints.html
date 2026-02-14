@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Fine Art Prints — Elle Phoenix</title>
-    <meta name="description" content="Fine art prints by Elle Phoenix. Museum-grade papers and archival inks." />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Fine art print options from Elle Phoenix photography." />
+    <title>Fine Art Prints — Elle Phoenix Photography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
@@ -13,12 +15,12 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="logo" href="index.html">ELLE PHOENIX</a>
-        <nav class="nav">
+        <nav class="nav" aria-label="Main navigation">
           <ul>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="index.html#offerings">Offerings</a></li>
+            <li><a href="prints.html" class="btn btn-accent">Prints</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="tours.html">Tours</a></li>
-            <li><a href="prints.html">Prints</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -26,50 +28,177 @@
     </header>
 
     <main>
-      <section class="section">
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="hero-kicker">Fine Art Prints</p>
+            <h1>Bring the frame into your <span>home</span></h1>
+            <p>
+              Limited editions and premium papers. Use your favorite portraits for a gallery-ready
+              display with a warm, minimal finish.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-accent" href="#sizes">Print Sizes</a>
+              <a class="btn btn-outline" href="contact.html">Request image list</a>
+            </div>
+          </div>
+          <div class="hero-media">
+            <picture>
+              <source type="image/avif" srcset="assets/images/places/IMG_2912.avif" />
+              <source type="image/webp" srcset="assets/images/places/IMG_2912.webp" />
+              <img
+                src="assets/images/places/IMG_2912.jpg"
+                alt="Icelandic landscape prepared for print display"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sizes">
         <div class="container">
-          <h1 class="section-title">Fine Art Prints</h1>
-          <p style="text-align:center" class="muted">Limited editions printed on Hahnemühle Photo Rag, signed and numbered.</p>
+          <p class="eyebrow">Fine Art</p>
+          <h2 class="section-title">Print Selection</h2>
+          <p class="section-lead">Choose format and ask for editions and paper options in your inquiry.</p>
 
-          <div class="cards" style="margin-top:24px">
+          <div class="offer-grid" style="margin-top:34px;">
+            <article class="package-card">
+              <div class="package-media">
+                <img
+                  src="assets/images/landscapes/2M7A8691.jpg"
+                  alt="Landscape framing example"
+                  loading="lazy"
+                />
+              </div>
+              <div class="package-content">
+                <p class="package-price">Small <span>20 × 30 cm</span></p>
+                <ul>
+                  <li>8 × 12 in</li>
+                  <li>From €150.00</li>
+                  <li class="package-tax">VAT (24%): €30.00</li>
+                  <li>Museum-ready matte finish</li>
+                </ul>
+                <a class="btn btn-accent" href="#book">Order Small</a>
+              </div>
+            </article>
+
+            <article class="package-card featured">
+              <div class="package-media">
+                <img
+                  src="assets/images/landscapes/IMG_4528.jpg"
+                  alt="Portrait print orientation example"
+                  loading="lazy"
+                />
+              </div>
+              <div class="package-content">
+                <p class="package-price">Medium <span>40 × 60 cm</span></p>
+                <ul>
+                  <li>16 × 24 in</li>
+                  <li>From €300.00</li>
+                  <li class="package-tax">VAT (24%): €60.00</li>
+                  <li>Most requested format</li>
+                </ul>
+                <a class="btn btn-accent" href="#book">Order Medium</a>
+              </div>
+            </article>
+
+            <article class="package-card">
+              <div class="package-media">
+                <img
+                  src="assets/images/landscapes/IMG_3706.jpg"
+                  alt="Large frame print detail"
+                  loading="lazy"
+                />
+              </div>
+              <div class="package-content">
+                <p class="package-price">Large <span>60 × 90 cm</span></p>
+                <ul>
+                  <li>24 × 36 in</li>
+                  <li>From €525.00</li>
+                  <li class="package-tax">VAT (24%): €105.00</li>
+                  <li>Impact print for bold wall statements</li>
+                </ul>
+                <a class="btn btn-accent" href="#book">Order Large</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="benefits">
+        <div class="container">
+          <p class="eyebrow">Delivery</p>
+          <h2 class="section-title">Notes</h2>
+          <div class="cards" style="margin-top:28px;">
             <div class="card">
-              <h3>Small</h3>
-              <p>20×30 cm (8×12 in)</p>
-              <p class="muted">From €120</p>
-              <a class="btn" href="contact.html">Order</a>
+              <h3>Limited Editions</h3>
+              <p class="muted">Standard order is capped per image to keep quality and consistency.</p>
             </div>
             <div class="card">
-              <h3>Medium</h3>
-              <p>40×60 cm (16×24 in)</p>
-              <p class="muted">From €240</p>
-              <a class="btn" href="contact.html">Order</a>
+              <h3>Global shipping</h3>
+              <p class="muted">Available worldwide with careful transit-safe packaging.</p>
             </div>
             <div class="card">
-              <h3>Large</h3>
-              <p>60×90 cm (24×36 in)</p>
-              <p class="muted">From €420</p>
-              <a class="btn" href="contact.html">Order</a>
+              <h3>Paper options</h3>
+              <p class="muted">Premium matte and fine-art rag-style stocks can be requested.</p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="card" style="margin-top:20px">
-            <h3>Notes</h3>
-            <ul>
-              <li>Framing available on request</li>
-              <li>Worldwide shipping</li>
-              <li>Editions of 50 per size</li>
-            </ul>
-            <p class="muted">To order, mention the image title from the portfolio and your preferred size.</p>
+      <section class="section section-dark" id="book">
+        <div class="container booking-grid">
+          <div>
+            <p class="eyebrow">Print Inquiry</p>
+            <h2 class="section-title">Order Your Favorite Image</h2>
+            <p>
+              Use the form with image title, dimensions, and preferred paper style.
+              I will confirm delivery timing and final pricing.
+            </p>
           </div>
+          <form class="booking-form" action="mailto:elisokalandia84@gmail.com" method="post" enctype="text/plain">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Print Type
+              <select name="interest" required>
+                <option>Small (20×30 cm)</option>
+                <option>Medium (40×60 cm)</option>
+                <option>Large (60×90 cm)</option>
+                <option>Custom Size</option>
+              </select>
+            </label>
+            <label>
+              Ask
+              <textarea name="message" rows="4" placeholder="Image title, quantity, paper preference, destination."></textarea>
+            </label>
+            <button class="btn" type="submit">Send Inquiry</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>© 2025 Elle Phoenix Photography</p>
-        <p>Iceland: +354 773 8238</p>
+        <p class="footer-brand">ELLE PHOENIX</p>
+        <div>
+          <a class="link" href="portfolio.html">Portfolio</a>
+          <a class="link" href="services.html">Services</a>
+          <a class="link" href="tours.html">Tours</a>
+          <a class="link" href="prints.html">Prints</a>
+          <a class="link" href="contact.html">Contact</a>
+        </div>
+        <p class="muted">Portraits · Landscapes · Tours in Iceland</p>
       </div>
+      <div class="container footer-copy">© 2025 Elle Phoenix Photography</div>
     </footer>
   </body>
 </html>
