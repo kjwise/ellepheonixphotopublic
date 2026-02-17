@@ -4,6 +4,14 @@
 (function () {
   const MANIFEST_URL = 'assets/images/manifest.json';
   const MASONRY_ROW_HEIGHT = 8;
+  const CATEGORY_ORDER = ['portraits', 'photo-tours', 'landscapes', 'brand-creative', 'food'];
+  const CATEGORY_TITLES = {
+    portraits: 'Portraits',
+    'photo-tours': 'Photo Tours',
+    landscapes: 'Landscape',
+    'brand-creative': 'Brand & Creative',
+    food: 'Food'
+  };
 
   function el(tag, attrs = {}, children = []) {
     const node = document.createElement(tag);
@@ -99,12 +107,32 @@
     return res.json();
   }
 
+  function prioritizeCategories(allCategories) {
+    const valid = (allCategories || []).filter((cat) => cat.images && cat.images.length);
+    const byName = new Map(valid.map((cat) => [cat.name, cat]));
+
+    const prioritized = CATEGORY_ORDER
+      .map((name) => byName.get(name))
+      .filter(Boolean)
+      .map((cat) => ({
+        ...cat,
+        title: CATEGORY_TITLES[cat.name] || cat.title || humanize(cat.name)
+      }));
+
+    if (prioritized.length) return prioritized;
+
+    return valid.map((cat) => ({
+      ...cat,
+      title: CATEGORY_TITLES[cat.name] || cat.title || humanize(cat.name)
+    }));
+  }
+
   async function renderPortfolio(rootId) {
     const root = document.getElementById(rootId);
     if (!root) return;
     try {
       const manifest = await loadManifest();
-      const cats = (manifest.categories || []).filter(c => c.images && c.images.length);
+      const cats = prioritizeCategories(manifest.categories);
       if (!cats.length) {
         root.appendChild(el('p', { class: 'muted', text: 'No images found.' }));
         return;
