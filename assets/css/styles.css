@@ -562,6 +562,18 @@ select {
   outline-offset: 2px;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.gallery-masonry {
+  grid-auto-flow: dense;
+  grid-auto-rows: 8px;
+}
+
 .gallery-item {
   margin: 0;
   background: linear-gradient(180deg, #0f1113 0%, #0b0d10 100%);
